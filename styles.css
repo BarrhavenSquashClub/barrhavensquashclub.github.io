@@ -1,0 +1,221 @@
+/* styles.css */
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding-top: 60px; /* Offset for fixed navbar */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Navigation */
+.navbar {
+    background: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('squash-court.jpg') center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 50px 0;
+    background: #f9f9f9;
+}
+
+.content-section:nth-child(even) {
+    background: white;
+}
+
+.content-section h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Cards */
+.columns {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #333;
+        flex-direction: column;
+        transition: 0.3s;
+        padding: 20px 0;
+        display: flex;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .hamburger.toggle .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.toggle .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.toggle .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+        padding: 0 20px;
+    }
+}
