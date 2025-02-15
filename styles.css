@@ -9,7 +9,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    padding-top: 60px; /* Offset for fixed navbar */
+    padding-top: 60px;
+    background: #f5f5f5;
 }
 
 .container {
@@ -81,40 +82,92 @@ body {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('squash-court.jpg') center/cover;
     color: white;
     text-align: center;
-    padding: 100px 0;
-    min-height: 300px;
+    padding: 150px 0;
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 60px;
 }
 
 /* Content Sections */
 .content-section {
-    padding: 50px 0;
-    background: #f9f9f9;
-}
-
-.content-section:nth-child(even) {
+    padding: 100px 0;
+    position: relative;
+    margin: 40px 0;
     background: white;
 }
 
+.content-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ddd, transparent);
+}
+
+.content-section:first-child:before {
+    display: none;
+}
+
+.content-section:nth-child(even) {
+    background: #f9f9f9;
+}
+
 .content-section h2 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    position: relative;
     text-align: center;
+}
+
+.content-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
 }
 
 /* Cards */
 .columns {
     display: grid;
-    gap: 20px;
+    gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Form Container */
+.form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-container h3 {
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 /* Contact Form */
@@ -124,24 +177,26 @@ body {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 input, textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 button {
     background: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease;
+    font-size: 16px;
 }
 
 button:hover {
@@ -151,10 +206,10 @@ button:hover {
 /* Social Icons */
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
-    font-size: 1.5em;
-    margin: 20px 0;
+    font-size: 1.8em;
+    margin: 40px 0;
 }
 
 .social-icons a {
@@ -171,7 +226,8 @@ footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0;
+    margin-top: 60px;
 }
 
 /* Mobile Styles */
@@ -214,40 +270,22 @@ footer {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .hero {
+        padding: 100px 0;
+        min-height: 300px;
+    }
+
     .hero h1 {
         font-size: 1.8em;
         padding: 0 20px;
     }
-}
 
-/* Add to styles.css */
-.form-container {
-    max-width: 800px;
-    margin: 40px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.form-container h3 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.form-container iframe {
-    width: 100%;
-    border: none;
-    min-height: 600px;
-}
-
-@media (max-width: 768px) {
-    .form-container {
-        margin: 20px auto;
-        padding: 15px;
+    .content-section {
+        padding: 60px 0;
+        margin: 20px 0;
     }
-    
-    .form-container iframe {
-        height: 800px; /* Adjust based on your form length */
+
+    .content-section:before {
+        width: 90%;
     }
 }
