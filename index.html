@@ -1,177 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barrhaven Squash Club</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barrhaven Squash Club</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#home" class="logo">Barrhaven Squash Club</a>
+      <button class="hamburger" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#house-league">House League</a>
+        <a href="#city-league">City League</a>
+        <a href="#membership">Membership</a>
+        <a href="#contact">Contact</a>
+        <a href="#socials">Socials</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Welcome to Barrhaven Squash Club</h1>
+      <p>Ottawa's premier destination for squash enthusiasts</p>
+    </div>
+  </section>
+
+  <section id="house-league" class="content-section">
+    <div class="container">
+      <h2>House League</h2>
+      <p>Our house league runs year-round with matches every Wednesday evening. Players are grouped by skill level:</p>
+      <div class="columns">
+        <div class="card">
+          <h3>Division A</h3>
+          <p>Advanced players with competitive experience</p>
+        </div>
+        <div class="card">
+          <h3>Division B</h3>
+          <p>Intermediate players looking to improve</p>
+        </div>
+        <div class="card">
+          <h3>Division C</h3>
+          <p>Beginner-friendly introductory league</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="city-league" class="content-section">
+    <div class="container">
+      <h2>City League</h2>
+      <p>We compete in the Ottawa Regional Squash Association league. Tryouts are held annually in September.</p>
+      <div class="columns">
+        <div class="card">
+          <h3>Men's Team</h3>
+          <p>Current standing: 2nd in Division 1</p>
+        </div>
+        <div class="card">
+          <h3>Women's Team</h3>
+          <p>2022 City Champions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="membership" class="content-section">
+    <div class="container">
+      <h2>Membership</h2>
+      <div class="columns">
+        <div class="card">
+          <h3>Individual</h3>
+          <p>$300/year</p>
+          <ul>
+            <li>Unlimited court access</li>
+            <li>League participation</li>
+            <li>Free clinics</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Student</h3>
+          <p>$200/year</p>
+          <ul>
+            <li>Valid student ID required</li>
+            <li>All individual benefits</li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-container">
         <div class="container">
-            <a href="#home" class="logo">Barrhaven Squash Club</a>
-            <button class="hamburger" aria-label="Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#membership">Membership</a>
-                <a href="#house-league">House League</a>
-                <a href="#city-league">City League</a>
-                <a href="#contact">Contact</a>
-                <a href="#socials">Socials</a>
+          <p>Interested in joining? Please fill out the google form below, and one of our admins will be in touch</p>
+        </div>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScOjSqpn9VmXP2zchnTJIAK5mcBo3hlap8R_F5hHNyhMt5kWg/viewform?embedded=true"
+          width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="content-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="columns">
+        <div class="card">
+          <h3>Visit Us</h3>
+          <p>123 Squash Lane<br>Barrhaven, ON K2J 5T6</p>
+          <p>Hours: 6AM - 11PM Daily</p>
+        </div>
+        <div class="card">
+          <h3>Send Message</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Name" required>
             </div>
-        </div>
-    </nav>
-
-    <!-- Sections -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Welcome to Barrhaven Squash Club</h1>
-            <p>Ottawa's premier destination for squash enthusiasts</p>
-        </div>
-    </section>
-
-    <section id="membership" class="content-section">
-        <div class="container">
-            <h2>Membership</h2>
-            <div class="columns">
-                <div class="card">
-                    <h3>Individual</h3>
-                    <p>$300/year</p>
-                    <ul>
-                        <li>Unlimited court access</li>
-                        <li>League participation</li>
-                        <li>Free clinics</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Student</h3>
-                    <p>$200/year</p>
-                    <ul>
-                        <li>Valid student ID required</li>
-                        <li>All individual benefits</li>
-                    </ul>
-                </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email" required>
             </div>
-            <div class="form-container">
-              <p>Please fill out the following google sheet if you're interested in joining the league</p>
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScOjSqpn9VmXP2zchnTJIAK5mcBo3hlap8R_F5hHNyhMt5kWg/viewform?embedded=true" 
-                      width="100%" 
-                      height="1200" 
-                      frameborder="0" 
-                      marginheight="0" 
-                      marginwidth="0">
-              </iframe>
-          </div>
-        </div>
-    </section>
-
-    <section id="house-league" class="content-section">
-        <div class="container">
-            <h2>House League</h2>
-            <p>Our house league runs year-round with matches every Wednesday evening. Players are grouped by skill level:</p>
-            <div class="columns">
-                <div class="card">
-                    <h3>Division A</h3>
-                    <p>Advanced players with competitive experience</p>
-                </div>
-                <div class="card">
-                    <h3>Division B</h3>
-                    <p>Intermediate players looking to improve</p>
-                </div>
-                <div class="card">
-                    <h3>Division C</h3>
-                    <p>Beginner-friendly introductory league</p>
-                </div>
+            <div class="form-group">
+              <textarea placeholder="Message" rows="4" required></textarea>
             </div>
+            <button type="submit">Send</button>
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="city-league" class="content-section">
-        <div class="container">
-            <h2>City League</h2>
-            <p>We compete in the Ottawa Regional Squash Association league. Tryouts are held annually in September.</p>
-            <div class="columns">
-                <div class="card">
-                    <h3>Men's Team</h3>
-                    <p>Current standing: 2nd in Division 1</p>
-                </div>
-                <div class="card">
-                    <h3>Women's Team</h3>
-                    <p>2022 City Champions</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="socials" class="content-section">
+    <div class="container">
+      <h2>Social Media</h2>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="content-section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="columns">
-                <div class="card">
-                    <h3>Visit Us</h3>
-                    <p>123 Squash Lane<br>Barrhaven, ON K2J 5T6</p>
-                    <p>Hours: 6AM - 11PM Daily</p>
-                </div>
-                <div class="card">
-                    <h3>Send Message</h3>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Barrhaven Squash Club</p>
+    </div>
+  </footer>
 
-    <section id="socials" class="content-section">
-        <div class="container">
-            <h2>Social Media</h2>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </section>
+  <script>
+    // Hamburger menu functionality
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Barrhaven Squash Club</p>
-        </div>
-    </footer>
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("toggle");
+    });
 
-    <script>
-        // Hamburger menu functionality
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-            hamburger.classList.toggle("toggle");
-        });
-
-        // Close menu when clicking a link (mobile)
-        document.querySelectorAll(".nav-links a").forEach(link => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
-                hamburger.classList.remove("toggle");
-            });
-        });
-    </script>
+    // Close menu when clicking a link (mobile)
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("toggle");
+      });
+    });
+  </script>
 </body>
+
 </html>
