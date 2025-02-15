@@ -7,10 +7,10 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     padding-top: 60px;
-    background: #f5f5f5;
+    background: white;
 }
 
 .container {
@@ -82,92 +82,63 @@ body {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('squash-court.jpg') center/cover;
     color: white;
     text-align: center;
-    padding: 150px 0;
+    padding: 100px 0;
     min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 /* Content Sections */
 .content-section {
-    padding: 100px 0;
+    padding: 60px 0;
     position: relative;
-    margin: 40px 0;
-    background: white;
 }
 
-.content-section:before {
+.content-section:not(:first-child)::before {
     content: '';
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #ddd, transparent);
-}
-
-.content-section:first-child:before {
-    display: none;
-}
-
-.content-section:nth-child(even) {
-    background: #f9f9f9;
+    width: 80px;
+    height: 2px;
+    background: rgba(0,0,0,0.1);
 }
 
 .content-section h2 {
-    margin-bottom: 50px;
-    padding-bottom: 20px;
-    position: relative;
+    margin-bottom: 30px;
     text-align: center;
-}
-
-.content-section h2:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: #333;
-    border-radius: 2px;
 }
 
 /* Cards */
 .columns {
     display: grid;
-    gap: 30px;
+    gap: 25px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .card {
     background: white;
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.08);
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card h3 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 /* Form Container */
 .form-container {
     max-width: 800px;
     margin: 40px auto;
-    background: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.form-container h3 {
-    margin-bottom: 30px;
-    text-align: center;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 4px;
 }
 
 /* Contact Form */
@@ -177,14 +148,14 @@ body {
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 input, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 16px;
 }
 
@@ -193,7 +164,7 @@ button {
     color: white;
     padding: 12px 25px;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
     transition: background 0.3s ease;
     font-size: 16px;
@@ -208,8 +179,8 @@ button:hover {
     display: flex;
     gap: 25px;
     justify-content: center;
-    font-size: 1.8em;
-    margin: 40px 0;
+    font-size: 1.6em;
+    margin: 30px 0;
 }
 
 .social-icons a {
@@ -226,8 +197,8 @@ footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 40px 0;
-    margin-top: 60px;
+    padding: 30px 0;
+    margin-top: 40px;
 }
 
 /* Mobile Styles */
@@ -271,21 +242,19 @@ footer {
     }
 
     .hero {
-        padding: 100px 0;
+        padding: 80px 0;
         min-height: 300px;
     }
 
-    .hero h1 {
-        font-size: 1.8em;
-        padding: 0 20px;
-    }
-
     .content-section {
-        padding: 60px 0;
-        margin: 20px 0;
+        padding: 40px 0;
     }
 
-    .content-section:before {
-        width: 90%;
+    .content-section:not(:first-child)::before {
+        width: 60px;
+    }
+
+    .columns {
+        gap: 20px;
     }
 }
