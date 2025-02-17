@@ -284,11 +284,12 @@ summary:focus-visible {
 summary {
     list-style: none; /* Standard method */
     padding-left: 44px; /* Maintain custom spacing */
+    -webkit-appearance: none; /* Critical for iOS Safari */
 }
 
 /* WebKit specific fix */
 summary::-webkit-details-marker {
-    display: none;
+    display: none !important;
 }
 
 /* Firefox specific fix */
