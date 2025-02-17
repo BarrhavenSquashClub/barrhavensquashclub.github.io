@@ -112,6 +112,12 @@ body {
     text-align: center;
 }
 
+.content-section h3 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+
 /* Cards */
 .columns {
     display: grid;
