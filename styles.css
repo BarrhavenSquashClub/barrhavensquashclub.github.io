@@ -112,6 +112,12 @@ body {
     text-align: center;
 }
 
+.content-section h3 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+
 /* Cards */
 .columns {
     display: grid;
@@ -199,6 +205,79 @@ footer {
     text-align: center;
     padding: 30px 0;
     margin-top: 40px;
+}
+
+/* Style the <details> element */
+details {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+/* Summary (header) styling */
+summary {
+    list-style: none; /* Remove default arrow */
+    cursor: pointer;
+    padding: 18px 20px 18px 44px; /* Extra left padding for custom marker */
+    position: relative;
+    font-weight: 600;
+    color: #333;
+    transition: background 0.2s ease;
+}
+
+/* Custom chevron icon */
+summary::before {
+    content: "\f054"; /* FontAwesome chevron-right */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+/* Open state styling */
+details[open] {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+details[open] summary::before {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* Hover states */
+details:hover {
+    border-color: rgba(0,0,0,0.15);
+}
+
+details:hover summary {
+    background: #f8f8f8;
+}
+
+/* Content styling */
+details > div {
+    padding: 0 20px 20px 44px; /* Match summary padding */
+    border-top: 1px solid rgba(0,0,0,0.05);
+    animation: detailsOpen 0.3s ease;
+}
+
+@keyframes detailsOpen {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Remove default focus outline */
+summary:focus {
+    outline: none;
+}
+
+/* Custom focus state */
+summary:focus-visible {
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+    border-radius: 4px;
 }
 
 /* Mobile Styles */
