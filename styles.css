@@ -280,6 +280,29 @@ summary:focus-visible {
     border-radius: 4px;
 }
 
+/* Completely remove default arrow across all browsers */
+summary {
+    list-style: none; /* Standard method */
+    padding-left: 44px; /* Maintain custom spacing */
+}
+
+/* WebKit specific fix */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Firefox specific fix */
+@-moz-document url-prefix() {
+    details > summary {
+        list-style: none;
+    }
+}
+
+/* Ensure custom chevron positioning */
+summary::before {
+    left: 20px !important; /* Force position consistency */
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .hamburger {
